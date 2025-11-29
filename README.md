@@ -1,8 +1,8 @@
 <div align="center">
 
-  src="banner.gif"
+  <img src="https://readme-typing-svg.herokuapp.com?font=Montserrat&weight=700&size=28&duration=3000&pause=1000&color=9F1010&center=true&vCenter=true&width=600&height=70&lines=Arquitecto+de+Software+%26+IA;De+la+Idea+al+Producto+%22Pulido%22;Backend+FastAPI+%7C+Frontend+Vue+%7C+AI+YOLO;Ganador+1er+Lugar+FECI+2025" alt="Typing SVG" />
 
-  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRkZWRkY2EwNjEwYjE5ODQ1YjA5YjA5YjA5YjA5YjA5YjA5SZ/L2L43cf00e/giphy.gif" width="600" />
+  <img src="banner.gif" width="600" />
 
   <br><br>
 
