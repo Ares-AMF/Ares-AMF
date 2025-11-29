@@ -70,7 +70,3 @@ Diseño las herramientas que hacen el software más eficiente:
 </div>
 
 <br>
-
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Ares-AMF&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117" />
-</div>
