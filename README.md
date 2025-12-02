@@ -1,13 +1,13 @@
 <div align="center">
 
-  <img src="https://readme-typing-svg.herokuapp.com?font=Montserrat&weight=700&size=28&duration=3000&pause=1000&color=9F1010&center=true&vCenter=true&width=600&height=70&lines=Arquitecto+de+Software+%26+IA;De+la+Idea+al+Producto+%22Pulido%22;Backend+FastAPI+%7C+Frontend+Vue+%7C+AI+YOLO;Ganador+1er+Lugar+FECI+2025" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Montserrat&weight=700&size=28&duration=3000&pause=1000&color=9F1010&center=true&vCenter=true&width=600&height=70&lines=Arquitecto+de+Soluciones+%26+IA;Lider+Tecnico+Full-Stack;Backend+FastAPI+%7C+Frontend+Vue;Ganador+1er+Lugar+FECI+2025" alt="Typing SVG" />
 
   <img src="banner.gif" width="600" />
 
   <br><br>
 
   # Hola, soy Ares 👋
-  ### 🏛️ Arquitecto de Software | 🧠 Especialista en IA | 🚀 Constructor 0→1
+  ### 🏛️ Arquitecto de Soluciones | 🧠 Líder Técnico en IA | 🚀 Constructor 0→1
 
   <p align="center">
     <i>"Construyo con libertad y rigor para dejar un legado técnico que inspire a otros a crear mejor."</i>
@@ -19,12 +19,12 @@
 
 ### 🧐 Sobre mí: El Artesano Digital
 
-No soy solo un programador; soy un **Artesano del Software**. Mi enfoque combina la lógica de la ingeniería con la creatividad del arte para diseñar arquitecturas robustas que resuelven problemas reales.
+No soy solo un programador; soy un **Artesano del Software**. Mi enfoque combina la lógica de la ingeniería con la creatividad del arte para diseñar arquitecturas robustas que resuelven problemas reales de negocio.
 
 * 🧬 **Biología + Código:** Mi gran pasión es la biología. Me especializo en fusionar tecnología con ciencias de la vida, creando soluciones como **AgriTech** (Agricultura de Precisión) y **MicroOV** (Microscopía con IA).
 * 🏆 **Validación:** Ganador del **1er Lugar Absoluto** en la Feria de Ciencias e Ingenierías (FECI 2025).
 * 🎨 **Mente Creativa:** Como artista y escritor en mis ratos libres, aplico esa sensibilidad al diseño de **interfaces pulidas (UI)** y código limpio.
-* 📚 **Formación Continua:** Ing. en Sistemas Computacionales (en curso) con certificaciones de **Cisco Networking Academy** y **Fundación Carlos Slim**.
+* 📚 **Formación Sólida:** Ingeniero en Sistemas Computacionales (en curso) respaldado por múltiples certificaciones de **Cisco Networking Academy** y **Fundación Carlos Slim**.
 
 ---
 
