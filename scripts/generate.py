@@ -82,8 +82,12 @@ def window(w: int, h: int, title: str, body: str) -> str:
   .cell{{opacity:0;animation:in .4s ease forwards}}
   .bar{{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .6s cubic-bezier(.2,.8,.2,1) forwards}}
   .cur{{animation:blink 1.1s steps(1) infinite}}
+  .pr{{opacity:0;animation:pr .5s ease forwards}}
+  .scan{{animation:scan 5s linear 1.6s infinite}}
+  @keyframes pr{{0%{{opacity:0;filter:brightness(3)}}60%{{opacity:1}}100%{{opacity:1;filter:none}}}}
+  @keyframes scan{{from{{transform:translateY(0)}}to{{transform:translateY(470px)}}}}
   @keyframes in{{to{{opacity:1}}}} @keyframes grow{{to{{transform:scaleY(1)}}}} @keyframes blink{{50%{{opacity:0}}}}
-  @media (prefers-reduced-motion:reduce){{.cell,.bar{{animation:none;opacity:1;transform:none}} .cur{{animation:none}}}}
+  @media (prefers-reduced-motion:reduce){{.cell,.bar,.pr{{animation:none;opacity:1;transform:none}} .cur,.scan{{animation:none}} .scan{{display:none}}}}
 </style>
 <rect width="{w}" height="{h}" rx="12" fill="{BG}" stroke="{BORDER}"/>
 <circle cx="22" cy="20" r="5.5" fill="#ff5f57"/><circle cx="40" cy="20" r="5.5" fill="#febc2e"/><circle cx="58" cy="20" r="5.5" fill="#28c840"/>
@@ -142,16 +146,26 @@ def contributions_svg(days, s) -> str:
 # ---------------------------------------------------------------- tarjeta 2: whoami
 def whoami_svg(s) -> str:
     W, H = 880, 470
-    portrait = (ASSETS / "portrait.txt").read_text(encoding="utf-8").splitlines()
+    portrait = json.loads((ASSETS / "portrait.json").read_text(encoding="utf-8"))
     parts = [prompt(24, 72, "whoami")]
-    # panel izquierdo: retrato ASCII
+    # panel izquierdo: caricatura en ASCII a color (generada con scripts/build_portrait.py)
     px, py, pw, ph = 24, 92, 400, 350
+    rows, ncols = portrait["rows"], portrait["cols"]
+    tw_ = pw - 28
+    lh = ph / (len(rows) + 1.2)
+    fs = lh * 1.12
+    parts.append(f'<defs><clipPath id="pc"><rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="8"/></clipPath>'
+                 f'<linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{LEVELS[4]}" stop-opacity="0"/>'
+                 f'<stop offset=".5" stop-color="{LEVELS[4]}" stop-opacity=".16"/><stop offset="1" stop-color="{LEVELS[4]}" stop-opacity="0"/></linearGradient></defs>')
     parts.append(f'<rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="8" fill="{PANEL}" stroke="{BORDER}"/>')
-    lh = 10.4
-    ty = py + (ph - len(portrait) * lh) / 2 + 8
-    for i, line in enumerate(portrait):
-        parts.append(f'<text x="{px+(pw-len(max(portrait,key=len))*6.25)/2:.0f}" y="{ty + i*lh:.1f}" font-size="10.4" xml:space="preserve" '
-                     f'fill="{TEXT}" opacity=".85">{escape(line)}</text>')
+    parts.append(f'<g clip-path="url(#pc)" font-size="{fs:.2f}" font-weight="700">')
+    y_base = py + ph - lh * (len(rows) - 1) - 4
+    for i, row in enumerate(rows):
+        spans = "".join(f'<tspan fill="{col}">{escape(txt)}</tspan>' if col else escape(txt) for txt, col in row)
+        parts.append(f'<text class="pr" style="animation-delay:{i*0.035:.3f}s" x="{px+14}" y="{y_base + i*lh:.1f}" '
+                     f'textLength="{tw_}" lengthAdjust="spacing" xml:space="preserve">{spans}</text>')
+    parts.append(f'<rect class="scan" x="{px}" y="{py-60}" width="{pw}" height="60" fill="url(#scan)"/>')
+    parts.append('</g>')
     # panel derecho: métricas
     rx, rw = 440, W - 440 - 24
     tiles = [

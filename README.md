@@ -6,7 +6,7 @@
 
 </div>
 
-## Ares Molina — CTO @ Chúuk
+## Ares A.M.F. — CTO @ Chúuk
 
 Construyo productos de 0 → 1 donde el software toca el mundo físico: **visión por computadora en el campo, laboratorios clínicos y almacenes**. Backend en **Python (FastAPI)**, interfaces en **Vue**, y modelos que corren **en el borde** cuando no hay internet.
 
