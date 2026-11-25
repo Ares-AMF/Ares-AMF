@@ -48,7 +48,7 @@ ares@github ~ $ cat ahora.txt
 <div align="center">
 
 <a href="https://ares-amf.github.io/Portafolio/"><img src="https://img.shields.io/badge/Portafolio-9F1010?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portafolio" /></a>
-<a href="https://www.linkedin.com/in/ares-arturo-molina-franco-4883aa35a"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://www.linkedin.com/in/ares-arturo-molina-franco"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 
 <sub>Fuera del teclado: dibujo, escribo, biología y mucha música 🎶</sub>
 

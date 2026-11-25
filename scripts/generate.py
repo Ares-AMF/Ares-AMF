@@ -155,8 +155,8 @@ def whoami_svg(s) -> str:
     lh = ph / (len(rows) + 1.2)
     fs = lh * 1.12
     parts.append(f'<defs><clipPath id="pc"><rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="8"/></clipPath>'
-                 f'<linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{LEVELS[4]}" stop-opacity="0"/>'
-                 f'<stop offset=".5" stop-color="{LEVELS[4]}" stop-opacity=".16"/><stop offset="1" stop-color="{LEVELS[4]}" stop-opacity="0"/></linearGradient></defs>')
+                 f'<linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/>'
+                 f'<stop offset=".5" stop-color="#ffffff" stop-opacity=".07"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient></defs>')
     parts.append(f'<rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="8" fill="{PANEL}" stroke="{BORDER}"/>')
     parts.append(f'<g clip-path="url(#pc)" font-size="{fs:.2f}" font-weight="700">')
     y_base = py + ph - lh * (len(rows) - 1) - 4

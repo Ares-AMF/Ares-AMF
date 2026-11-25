@@ -1,4 +1,4 @@
-"""Convierte una foto en caricatura de colores planos y luego en ASCII a color.
+"""Convierte una foto en caricatura de colores planos y luego en ASCII monocromo.
 
 Se corre una sola vez en local (necesita Pillow y numpy):
 
@@ -40,10 +40,20 @@ PALETTE = {
     "tie":    ((210, 49, 67),   (229, 72, 77)),
     "glass":  ((137, 164, 133), (150, 214, 196)),
 }
-ASCII_COLORS = {"ink": (92, 70, 80), "ink2": (120, 92, 98)}  # más visibles sobre fondo oscuro
 LINE_ART = (40, 26, 30)
-LINE_ASCII = (62, 34, 42)
-RAMP = " .:-=+*#%@"
+# zona: (carácter, gris 0-255) — una "textura" distinta por zona para el ASCII monocromo
+MONO = {
+    "ink":    ("\"", 110),  # pelo
+    "ink2":   ("~", 130),
+    "skinL":  ("@", 240),
+    "skinM":  ("*", 190),
+    "skinS":  (";", 135),
+    "shirtL": ("=", 205),
+    "shirtS": ("-", 140),
+    "tie":    ("#", 255),
+    "tieS":   ("x", 170),
+    "glass":  ("o", 255),
+}
 
 
 def grow(seed: np.ndarray, allowed: np.ndarray) -> np.ndarray:
@@ -112,10 +122,14 @@ def main(src: str) -> None:
     Image.fromarray(flat).save(ASSETS / "avatar.png")
     toon = np.asarray(Image.fromarray(flat).convert("L")).astype(float)
 
-    # ASCII a color
+    # ASCII monocromo: cada zona tiene su propio carácter y tono de gris,
+    # y los contornos se dibujan con | - / \ según la dirección del borde
+    g = np.asarray(im.convert("L").filter(ImageFilter.GaussianBlur(2))).astype(float)
+    gy, gx = np.gradient(g)
+    strong = lines
     h, w = lab.shape
     cw = w / COLS; ch = cw / 0.5625
-    hexc = lambda c: "#%02x%02x%02x" % tuple(c)
+    hexc = lambda v: "#%02x%02x%02x" % (v, v, v)
     rows = []
     for r in range(int(h / ch)):
         row: list[list] = []
@@ -126,15 +140,17 @@ def main(src: str) -> None:
                 glyph, col = " ", None
             else:
                 n = names[np.bincount(fg).argmax()]
-                ln = lines[y0:y1, x0:x1].mean()
-                if ln > .3 and n not in ("ink", "ink2"):
-                    glyph, col = ("#" if ln > .5 else "*"), hexc(LINE_ASCII)
-                elif n in ("ink", "ink2"):
-                    glyph, col = (":" if (r + c) % 2 else "="), hexc(ASCII_COLORS[n])
+                thr = .16 if n in ("skinL", "skinM", "glass") else .3  # rasgos finos de la cara
+                if strong[y0:y1, x0:x1].mean() > thr and n not in ("ink", "ink2"):
+                    sx, sy = gx[y0:y1, x0:x1].sum(), gy[y0:y1, x0:x1].sum()
+                    ang = (np.degrees(np.arctan2(sy, sx)) + 90) % 180  # dirección de la línea
+                    glyph = "-" if ang < 22.5 or ang >= 157.5 else "\\" if ang < 67.5 else "|" if ang < 112.5 else "/"
+                    col = hexc(255)
                 else:
-                    lum = toon[y0:y1, x0:x1].mean() / 255
-                    glyph = RAMP[2 + int(min(.999, lum * 1.6) * (len(RAMP) - 2))]
-                    col = hexc(PALETTE[n][1])
+                    glyph, v = MONO[n]
+                    if n in ("ink", "ink2") and r * ch > HAIR_Y:  # traje: trama alterna
+                        glyph = ":" if (r + c) % 2 else "."
+                    col = hexc(v)
             if row and row[-1][1] == col:
                 row[-1][0] += glyph
             else:
