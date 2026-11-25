@@ -1,72 +1,55 @@
 <div align="center">
 
-  <img src="https://readme-typing-svg.herokuapp.com?font=Montserrat&weight=700&size=28&duration=3000&pause=1000&color=9F1010&center=true&vCenter=true&width=600&height=70&lines=Arquitecto+de+Soluciones+%26+IA;Lider+Tecnico+Full-Stack;Backend+FastAPI+%7C+Frontend+Vue;Ganador+1er+Lugar+FECI+2025" alt="Typing SVG" />
+<img src="./assets/contributions.svg" width="100%" alt="Mapa de contribuciones de Ares en el último año" />
 
-  <img src="banner.gif" width="600" />
-
-  <br><br>
-
-  # Hola, soy Ares 👋
-  ### 🏛️ Arquitecto de Soluciones | 🧠 Líder Técnico en IA | 🚀 Constructor 0→1
-
-  <p align="center">
-    <i>"Construyo con libertad y rigor para dejar un legado técnico que inspire a otros a crear mejor."</i>
-  </p>
+<img src="./assets/whoami.svg" width="100%" alt="Retrato ASCII de Ares y métricas de actividad en GitHub" />
 
 </div>
 
----
+## Ares Molina — CTO @ Chúuk
 
-### 🧐 Sobre mí: El Artesano Digital
+Construyo productos de 0 → 1 donde el software toca el mundo físico: **visión por computadora en el campo, laboratorios clínicos y almacenes**. Backend en **Python (FastAPI)**, interfaces en **Vue**, y modelos que corren **en el borde** cuando no hay internet.
 
-No soy solo un programador; soy un **Artesano del Software**. Mi enfoque combina la lógica de la ingeniería con la creatividad del arte para diseñar arquitecturas robustas que resuelven problemas reales de negocio.
+Soy **CTO de Chúuk** y estudio Ingeniería en Sistemas Computacionales en Chihuahua, México. 🏆 **1er lugar absoluto — FECI 2025.**
 
-* 🧬 **Biología + Código:** Mi gran pasión es la biología. Me especializo en fusionar tecnología con ciencias de la vida, creando soluciones como **AgriTech** (Agricultura de Precisión) y **MicroOV** (Microscopía con IA).
-* 🏆 **Validación:** Ganador del **1er Lugar Absoluto** en la Feria de Ciencias e Ingenierías (FECI 2025).
-* 🎨 **Mente Creativa:** Como artista y escritor en mis ratos libres, aplico esa sensibilidad al diseño de **interfaces pulidas (UI)** y código limpio.
-* 📚 **Formación Sólida:** Ingeniero en Sistemas Computacionales (en curso) respaldado por múltiples certificaciones de **Cisco Networking Academy** y **Fundación Carlos Slim**.
+**Siempre abierto a colaborar** — si tienes un problema difícil de software o IA, escríbeme.
 
----
+```text
+ares@github ~ $ cat ahora.txt
+→ Llevando AgriTech a parcelas reales (despliegue en campo, 2026)
+→ Integrando cálculos bioquímicos en LabSnap junto a Adaca Medical
+→ Escribiendo herramientas pequeñas y rápidas, sin dependencias
+```
 
-### 🛠️ Tech Stack & Herramientas
+### Productos — Chúuk
+
+| | Proyecto | Qué resuelve | Stack |
+|:-:|:--|:--|:--|
+| 🌱 | **AgriTech** | Detecta plagas en cultivo con IA, 100 % offline en el campo. | `FastAPI` `YOLOv8n` `Edge` |
+| 🧪 | **LabSnap** | LIS para 22+ tipos de estudios clínicos, con respaldo corporativo. | `Laravel` `Vue` `PostgreSQL` |
+| 🔬 | **MicroOV** | Análisis microscópico en segundos, guiado por IA. | `YOLOv8` `GPT-4` `FastAPI` |
+| 📦 | **Smart-FIFO** | Rotación FIFO garantizada con QR y mapa del almacén. | `FastAPI` `MySQL` |
+| 📱 | **CellyApp** | Una base de código para escritorio y Android. | `TypeScript` `Chromium` |
+
+### Open source
+
+| Repo | En una línea |
+|:--|:--|
+| [**eco_fastapi_template**](https://github.com/Ares-AMF/eco_fastapi_template) | Plantilla FastAPI de bajo consumo: `orjson` + `uvloop` + rate limiting. |
+| [**vanilla_fetcher**](https://github.com/Ares-AMF/vanilla_fetcher) | Cliente HTTP < 2 KB con backoff exponencial y modo ahorro de datos. |
+| [**disk-audit-cli**](https://github.com/Ares-AMF/disk-audit-cli) | Auditor de disco en paralelo con `os.scandir`, cero dependencias. |
+
+### Stack
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,fastapi,pytorch,php,laravel,ts,js,vue,tailwind,postgres,mysql,docker,linux,git&theme=dark&perline=14" alt="Python, FastAPI, PyTorch, PHP, Laravel, TypeScript, JavaScript, Vue, Tailwind, PostgreSQL, MySQL, Docker, Linux, Git" />
+</p>
 
 <div align="center">
 
-| **Core & Backend** | **Frontend & UI** | **IA & Data** | **Infra & Tools** |
-| :---: | :---: | :---: | :---: |
-| <img src="https://skillicons.dev/icons?i=python" width="40"/> <img src="https://skillicons.dev/icons?i=fastapi" width="40"/> | <img src="https://skillicons.dev/icons?i=js" width="40"/> <img src="https://skillicons.dev/icons?i=vue" width="40"/> | <img src="https://skillicons.dev/icons?i=pytorch" width="40"/> <img src="https://skillicons.dev/icons?i=tensorflow" width="40"/> | <img src="https://skillicons.dev/icons?i=docker" width="40"/> <img src="https://skillicons.dev/icons?i=git" width="40"/> |
-| <img src="https://skillicons.dev/icons?i=php" width="40"/> <img src="https://skillicons.dev/icons?i=laravel" width="40"/> | <img src="https://skillicons.dev/icons?i=html" width="40"/> <img src="https://skillicons.dev/icons?i=tailwind" width="40"/> | **YOLOv8** <br> **GPT-4 API** | <img src="https://skillicons.dev/icons?i=mysql" width="40"/> <img src="https://skillicons.dev/icons?i=linux" width="40"/> |
+<a href="https://ares-amf.github.io/Portafolio/"><img src="https://img.shields.io/badge/Portafolio-9F1010?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portafolio" /></a>
+<a href="https://www.linkedin.com/in/ares-arturo-molina-franco-4883aa35a"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+
+<sub>Fuera del teclado: dibujo, escribo, biología y mucha música 🎶</sub>
 
 </div>
-
----
-
-### 🚀 Herramientas Open Source (Creadas por mí)
-
-Diseño las herramientas que hacen el software más eficiente:
-
-| Herramienta | Descripción | Stack |
-| :--- | :--- | :--- |
-| [**⚡ Eco-FastAPI Template**](https://github.com/Ares-AMF/eco_fastapi_template) | Arquitectura base para microservicios optimizada para bajo consumo (Green Coding). | `FastAPI` `Rust` `uvloop` |
-| [**🌐 Vanilla Fetcher**](https://github.com/Ares-AMF/vanilla_fetcher) | Cliente HTTP ultraligero (<2KB) con reintentos inteligentes y modo ahorro de datos. | `JS (ES6)` `Zero-Dep` |
-| [**🐍 Disk Audit CLI**](https://github.com/Ares-AMF/disk-audit-cli) | Auditor de disco de alto rendimiento usando `multiprocessing` y syscalls optimizadas. | `Python` `OS` `Syscalls` |
-
----
-
-<div align="center">
-  
-  <p>
-    🎮 <b>Offline:</b> Me encontrarás en Xbox o disfrutando de la música (la vida no es vida sin ella 🎶).
-  </p>
-
-  <br>
-  
-  <a href="https://ares-amf.github.io/Portafolio/">
-    <img src="https://img.shields.io/badge/Ver_Mi_Portafolio_Completo-9F1010?style=for-the-badge&logo=googlechrome&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/in/ares-arturo-molina-franco-4883aa35a">
-    <img src="https://img.shields.io/badge/Conectar_en_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-</div>
-
-<br>
