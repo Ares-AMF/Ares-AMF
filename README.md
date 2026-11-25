@@ -2,7 +2,7 @@
 
 <img src="./assets/contributions.svg" width="100%" alt="Mapa de contribuciones de Ares en el último año" />
 
-<img src="./assets/whoami.svg" width="100%" alt="Retrato ASCII de Ares y métricas de actividad en GitHub" />
+<img src="./assets/whoami.svg" width="100%" alt="Isotipo de Chúuk en ASCII y métricas de actividad en GitHub" />
 
 </div>
 

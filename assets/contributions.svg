@@ -21,11 +21,11 @@
 <rect class="cell" style="animation-delay:0.00s" x="64" y="142" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2025-11-25: 0</title></rect>
 <rect class="cell" style="animation-delay:0.00s" x="64" y="157" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2025-11-26: 0</title></rect>
 <rect class="cell" style="animation-delay:0.00s" x="64" y="172" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2025-11-27: 0</title></rect>
-<rect class="cell" style="animation-delay:0.00s" x="64" y="187" width="12" height="12" rx="2.5" fill="#e5484d"><title>2025-11-28: 15</title></rect>
-<rect class="cell" style="animation-delay:0.00s" x="64" y="202" width="12" height="12" rx="2.5" fill="#7a1a1c"><title>2025-11-29: 4</title></rect>
+<rect class="cell" style="animation-delay:0.00s" x="64" y="187" width="12" height="12" rx="2.5" fill="#e5484d"><title>2025-11-28: 19</title></rect>
+<rect class="cell" style="animation-delay:0.00s" x="64" y="202" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2025-11-29: 0</title></rect>
 <rect class="cell" style="animation-delay:0.01s" x="79" y="112" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2025-11-30: 0</title></rect>
 <rect class="cell" style="animation-delay:0.01s" x="79" y="127" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2025-12-01: 0</title></rect>
-<rect class="cell" style="animation-delay:0.01s" x="79" y="142" width="12" height="12" rx="2.5" fill="#7a1a1c"><title>2025-12-02: 4</title></rect>
+<rect class="cell" style="animation-delay:0.01s" x="79" y="142" width="12" height="12" rx="2.5" fill="#4a1416"><title>2025-12-02: 4</title></rect>
 <rect class="cell" style="animation-delay:0.01s" x="79" y="157" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2025-12-03: 0</title></rect>
 <rect class="cell" style="animation-delay:0.01s" x="79" y="172" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2025-12-04: 0</title></rect>
 <rect class="cell" style="animation-delay:0.01s" x="79" y="187" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2025-12-05: 0</title></rect>
@@ -111,7 +111,7 @@
 <rect class="cell" style="animation-delay:0.14s" x="244" y="187" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2026-02-20: 0</title></rect>
 <rect class="cell" style="animation-delay:0.14s" x="244" y="202" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2026-02-21: 0</title></rect>
 <rect class="cell" style="animation-delay:0.16s" x="259" y="112" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2026-02-22: 0</title></rect>
-<rect class="cell" style="animation-delay:0.16s" x="259" y="127" width="12" height="12" rx="2.5" fill="#7a1a1c"><title>2026-02-23: 4</title></rect>
+<rect class="cell" style="animation-delay:0.16s" x="259" y="127" width="12" height="12" rx="2.5" fill="#4a1416"><title>2026-02-23: 4</title></rect>
 <rect class="cell" style="animation-delay:0.16s" x="259" y="142" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2026-02-24: 0</title></rect>
 <rect class="cell" style="animation-delay:0.16s" x="259" y="157" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2026-02-25: 0</title></rect>
 <rect class="cell" style="animation-delay:0.16s" x="259" y="172" width="12" height="12" rx="2.5" fill="#1c1c21"><title>2026-02-26: 0</title></rect>

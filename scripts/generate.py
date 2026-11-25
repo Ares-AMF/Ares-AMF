@@ -146,24 +146,26 @@ def contributions_svg(days, s) -> str:
 # ---------------------------------------------------------------- tarjeta 2: whoami
 def whoami_svg(s) -> str:
     W, H = 880, 470
-    portrait = json.loads((ASSETS / "portrait.json").read_text(encoding="utf-8"))
+    logo = json.loads((ASSETS / "logo.json").read_text(encoding="utf-8"))
     parts = [prompt(24, 72, "whoami")]
-    # panel izquierdo: caricatura en ASCII a color (generada con scripts/build_portrait.py)
+    # panel izquierdo: isotipo de Chúuk en ASCII (generado con scripts/build_logo.py)
     px, py, pw, ph = 24, 92, 400, 350
-    rows, ncols = portrait["rows"], portrait["cols"]
-    tw_ = pw - 28
-    lh = ph / (len(rows) + 1.2)
-    fs = lh * 1.12
+    lines, ncols = logo["lines"], logo["cols"]
+    lh = ph / (len(lines) + 1)
+    fs = lh * 1.05
+    tw_ = ncols * fs * 0.6
+    tx = px + (pw - tw_) / 2
     parts.append(f'<defs><clipPath id="pc"><rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="8"/></clipPath>'
                  f'<linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/>'
                  f'<stop offset=".5" stop-color="#ffffff" stop-opacity=".07"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient></defs>')
     parts.append(f'<rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="8" fill="{PANEL}" stroke="{BORDER}"/>')
-    parts.append(f'<g clip-path="url(#pc)" font-size="{fs:.2f}" font-weight="700">')
-    y_base = py + ph - lh * (len(rows) - 1) - 4
-    for i, row in enumerate(rows):
-        spans = "".join(f'<tspan fill="{col}">{escape(txt)}</tspan>' if col else escape(txt) for txt, col in row)
-        parts.append(f'<text class="pr" style="animation-delay:{i*0.035:.3f}s" x="{px+14}" y="{y_base + i*lh:.1f}" '
-                     f'textLength="{tw_}" lengthAdjust="spacing" xml:space="preserve">{spans}</text>')
+    parts.append(f'<g clip-path="url(#pc)" font-size="{fs:.2f}" font-weight="700" fill="#f2f2f2">')
+    y0 = py + lh * 1.1
+    for i, line in enumerate(lines):
+        if not line.strip():
+            continue
+        parts.append(f'<text class="pr" style="animation-delay:{i*0.04:.2f}s" x="{tx:.1f}" y="{y0 + i*lh:.1f}" '
+                     f'textLength="{tw_:.1f}" lengthAdjust="spacing" xml:space="preserve">{escape(line)}</text>')
     parts.append(f'<rect class="scan" x="{px}" y="{py-60}" width="{pw}" height="60" fill="url(#scan)"/>')
     parts.append('</g>')
     # panel derecho: métricas
